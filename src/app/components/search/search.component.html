@@ -1,0 +1,41 @@
+<div class="ng-autocomplete">
+     <ng-autocomplete
+         [data] = "data$"
+         [searchKeyword] = "keyword"
+         (selected) = 'selectEvent($event)'
+         (inputChanged) = 'getServerResponse($event)'
+         (inputFocused) = 'onFocused($event)'
+         [itemTemplate] = "itemTemplate"
+         (inputCleared) = "searchCleared()"
+         [notFoundTemplate]="notFoundTemplate"
+         [debounceTime] = "500"
+         [isLoading] = "isLoadingResult"
+         [minQueryLength] = "2"
+         placeHolder = "Pesquisar por livro"
+     >
+     </ng-autocomplete>
+     <ng-template #itemTemplate let-item>
+         <!-- <p>{{ item.name }}</p> -->
+         <a href="javascript:void(0)">
+             <div class="row">
+                 <div class="col-2" *ngIf="item.volumeInfo.imageLinks">
+                     <img [src]="item.volumeInfo.imageLinks.smallThumbnail" alt="" style="width: 70px;">
+                 </div>
+                 <div class="col-2" *ngIf="item.volumeInfo.imageLinks == null">
+                     <!-- <img [src]="item.volumeInfo.imageLinks.smallThumbnail" alt="" style="width: 70px;"> -->
+                 </div>
+                 <div class="col-10">
+                     <span [innerHTML]= "item.volumeInfo.title"></span>
+                     <p class="uk-article-meta"> Autor: {{ item.volumeInfo.authors }} </p>
+                     <p class="uk-article-meta">{{ item.volumeInfo.description | truncate: 150 : true }} </p>
+                 </div>
+             </div>
+         </a>
+         <!-- <a href="javascript:void(0)">
+             <span [innerHTML]="item.volumeInfo.title"></span>, 
+         </a> -->
+     </ng-template>
+     <ng-template #notFoundTemplate>
+         {{ errorMsg }}
+     </ng-template> 
+ </div>

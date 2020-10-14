@@ -1,0 +1,45 @@
+.page-login{
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+
+}
+
+.card-login{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: 1;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+     height: 600px;
+     width: 1000px;
+     margin: auto;
+     box-shadow: 0 0 3px #333;
+}
+
+.img-card{
+     background-image: url("../../../assets/img/login.png"), url("../../../assets/img/background.png");
+     background-size: 100%, 95% 100%;
+     background-repeat: no-repeat;
+     background-position-y: center;
+     background-position-x: center, right;
+}
+
+.acesso-inputs{
+     display: flex;
+     flex-direction: row;
+
+}
+
+.form_login{
+     display: grid;
+     align-content: center;
+     margin: 0 auto;
+
+}
+
+input{
+     display: flex;
+     flex-direction: row;
+}
+

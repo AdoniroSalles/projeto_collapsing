@@ -1,0 +1,21 @@
+.example-list {
+     border: solid 1px #ccc;
+     min-height: 60px;
+     background: white;
+     border-radius: 4px;
+     overflow: hidden;
+     display: block;
+     margin-bottom: 10px;
+     
+   }
+.example-list:hover{
+     box-shadow: 1px 1px 4px 1px #6666662e;
+}
+.example-list:focus{
+     transform: scale(2);
+}
+.cdk-drag-animating {
+     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+     transform: scale(0.2);
+}
+

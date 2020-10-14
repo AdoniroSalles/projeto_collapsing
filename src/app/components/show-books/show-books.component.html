@@ -1,0 +1,12 @@
+<div class="uk-card uk-card-default">
+     <div class="uk-card-body" *ngFor="let book of books">
+          <div class="d-flex justify-content-center">
+               <h1 class="uk-card-title"> {{ book.volumeInfo.title }} </h1>
+          </div>
+          <div class="row">
+               <div class="col-md-4">
+                    <img  src="{{ book.volumeInfo.imageLinks.thumbnail }} " alt="">
+               </div>
+          </div>
+     </div>
+</div>

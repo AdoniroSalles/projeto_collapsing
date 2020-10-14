@@ -1,0 +1,63 @@
+<div class="row" cdkDropListGroup>
+     <div class="col-md-4">
+          <div class="card">
+               <div class="card-body">
+                    <h2 class="card-title">Quero Comprar</h2>
+                    <div 
+                         cdkDropList 
+                         [cdkDropListData]="todo"
+                         (cdkDropListDropped)="drop($event)"
+                    >
+                         <div class="card-body example-list" *ngFor="let item of todo" cdkDrag>
+                              <div class="card-text">
+                                   {{ item }}
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="col-md-4">
+          <div class="card">
+               <div class="card-body">
+                    <h2 class="card-title">Lendo</h2>
+                    <div 
+                    cdkDropList 
+                    [cdkDropListData]="done"
+                    (cdkDropListDropped)="drop($event)"
+    
+               >
+                    <div class="card-body example-list" *ngFor="let item of done" cdkDrag>
+                         <div class="card-text">
+                             {{ item }}
+                         </div>
+                    </div>
+               </div>
+               </div>
+          </div>
+     </div>
+     <div class="col-md-4">
+          <div class="card">
+               <div class="card-body">
+                    <h2 class="card-title">Lidos</h2>
+                    <div 
+                    cdkDropList 
+                    [cdkDropListData]="did"
+                    (cdkDropListDropped)="drop($event)"
+               >
+                    <div class="card-body example-list" *ngFor="let item of did" cdkDrag>
+                         <div class="card-text">
+                             {{ item }}
+                         </div>
+                    </div>
+                    <div *ngIf="did.length == 0 ">
+                         <div class="card-body" cdkDrag>
+                              <div class="card-text uk-animation-fade">
+                                  <p class="uk-article-meta" >...</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>

@@ -11,6 +11,7 @@ import { TruncatePipe } from 'src/app/pipe/truncate.pipe';
 import { ShowBooksComponent } from 'src/app/components/show-books/show-books.component';
 import { PerfilComponent } from 'src/app/components/perfil/perfil.component';
 import { HomePageComponent } from 'src/app/components/home-page/home-page.component';
+import { CardsComponent } from 'src/app/components/cards/cards.component';
 
 
 
@@ -22,7 +23,8 @@ import { HomePageComponent } from 'src/app/components/home-page/home-page.compon
     SearchComponent,
     ShowBooksComponent,
     PerfilComponent,
-    HomePageComponent
+    HomePageComponent,
+    CardsComponent
 
   ],
   imports: [

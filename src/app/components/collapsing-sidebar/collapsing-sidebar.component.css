@@ -60,6 +60,7 @@ span {
   align-items: stretch;
 }
 
+
 #sidebar {
   min-width: 250px;
   max-width: 250px;
@@ -72,6 +73,14 @@ span {
   min-width: 80px;
   max-width: 80px;
   text-align: center;
+}
+
+#sidebar.ativa{
+  margin-left: -250px;
+}
+
+#sidebar.hidden{
+  margin-left: -80px;
 }
 
 #sidebar.active .sidebar-header h3,
@@ -218,7 +227,7 @@ a.article:hover {
 }
 
 #menu_mobile {
-  display: none;
+  display: inline-block;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES

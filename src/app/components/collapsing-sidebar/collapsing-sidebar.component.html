@@ -1,12 +1,12 @@
-<div class="wrapper">
+<div class="wrapper ">
      <!-- Sidebar  -->
-     <nav id="sidebar" [ngClass]="{ active: ativaMenu }">
+     <nav id="sidebar" class="sidebarnav" [ngClass]="{ active: ativaMenu, ativa: ativaSidebar, hidden: hiddenMenu }">
           <div class="sidebar-header">
                <h3>Bootstrap Sidebar</h3>
                <strong>BS</strong>
           </div>
 
-          <ul class="list-unstyled components">
+          <ul class="list-unstyled components ">
 
                <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -72,38 +72,15 @@
      </nav>
 
      <!-- Page Content  -->
-     <div id="content">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <div class="container-fluid">
-                    <button type="button" id="menu_mobile" class="btn btn-info" (click)="activateToogle()">
-                         <i class="material-icons md-">sort</i>
+     <div class="container-fluid" style="padding: 0;">
+          <div class="uk-navbar-container" uk-navbar>
+               <div class="uk-navbar-left">
+                    <button type="button" id="menu_mobile" class="uk-navbar-toggle" uk-navbar-toggle-icon (click)="activateSidebar()">
                     </button>
-                    <search></search>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                         aria-expanded="false" aria-label="Toggle navigation">
-                         <i class="fas fa-align-justify"></i>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                         <ul class="nav navbar-nav ml-auto">
-                              <li class="nav-item active">
-                                   <a class="nav-link" href="#">Page</a>
-                              </li>
-                              <li class="nav-item">
-                                   <a class="nav-link" href="#">Page</a>
-                              </li>
-                              <li class="nav-item">
-                                   <a class="nav-link" href="#">Page</a>
-                              </li>
-                              <li class="nav-item">
-                                   <a class="nav-link" href="#">Page</a>
-                              </li>
-                         </ul>
-                    </div>
                </div>
-          </nav>
-          <ng-content ></ng-content>
-          
+           </div>
+          <div id="content">
+               <ng-content ></ng-content>
+          </div>
      </div>
 </div>

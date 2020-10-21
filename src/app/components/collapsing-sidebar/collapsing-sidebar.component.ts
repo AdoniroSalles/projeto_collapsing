@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class CollapsingSidebarComponent implements OnInit {
 
   ativaMenu: boolean = false
+  ativaSidebar: boolean = false
+  hiddenMenu: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +19,15 @@ export class CollapsingSidebarComponent implements OnInit {
   //ativa menu lateral
   activateToogle() {
     this.ativaMenu = !this.ativaMenu
+  }
+
+  activateSidebar(){
+    if(this.ativaMenu){
+      this.hiddenMenu = !this.hiddenMenu
+    }else{
+      this.ativaSidebar = !this.ativaSidebar
+    }
+    
   }
 
 }

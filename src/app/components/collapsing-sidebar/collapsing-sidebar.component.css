@@ -251,6 +251,11 @@ a.article:hover {
     -ms-transform: translateX(50%);
     transform: translateX(50%);
   }
+
+  #sidebar.ativa{
+    margin-left: 0 !important;
+  }
+  
   #sidebar.active {
     margin-left: 0 !important;
   }
